@@ -47,24 +47,29 @@ function contact(event) {
          .then(() => {
         loading.classList.remove("modal__overlay--visible");
         success.classList += " modal__overlay--visable";
-        })
-        .catch(() => {
+        )
+}
+        
+    .catch(() => {
         loading.classList.remove("modal__overlay--visible");
         alert(
             "The email service is temporarily unavailable. Please contact me directly on email@dam.oilbrokr55@gmail.com"
         );
-    })
+    )
 }
 
-    let (isModalOpen) = false;
+
+     let (isModalOpen) = false;
         function toggleModal() {
-    if (modalOpen) {
-        isModalOpen = false;
-        return document.body.classList.remove("modal--open");
+         if (modalOpen) {
+             isModalOpen = false;
+                return document.body.classList.remove("modal--open");
     }
-    isModalOpen = true;
-    // toggle modal
-document.body.classList += " modal--open";
+        isModalOpen = true;
+        // toggle modal
+            document.body.classList += " modal--open";
 }
 
-   
+
+
+

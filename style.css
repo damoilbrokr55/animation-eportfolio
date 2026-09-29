@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapais.com/css2?family=Roboto:wght@0,100...900;1,100...900&display=swap" rel="stylesheet")
 
-
 *  {
     margin: 0;
     padding: 0;
@@ -8,8 +7,12 @@
     font-family: "Roboto" sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 li {
-    list__style--type: none;
+    list-style-type: none;
 }
 
 p {
@@ -123,11 +126,11 @@ label {
     width: 100%;
 }
 
-nav,
+ nav,
 .scroll,
 .header {
-    opacity: 1;
-    visibilty: visible;
+    opacity: 1; 
+    visibility: visible;
     transition: all 600ms 800ms;
 }
 
@@ -226,9 +229,11 @@ LANDING PAGE
     border: none;
     background-color: #242424;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 32px;
     right: 40px;
+    z-index: 100;
+    box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
 }
 
 .scroll {
@@ -548,7 +553,7 @@ PROJECTS
 
 .project__wrapper:hover .project__description {
     opacity: 1
-    transform: translateY(-50%);
+    transform translateY(-50%);
 }
 
 .project__wrapper:hover .project__img {
@@ -603,6 +608,7 @@ FOOTER
 */
 
 footer {
+    position: relative;
     background-color: #242424;
     display: flex;
     padding: 6% 0;
@@ -706,6 +712,71 @@ width=80 vw
     top: 80;
     left: 80vw;
 }
+
+
+/* Small phones, tablets, large smart phones */
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 80px;
+    }
+    .header__para {
+        font-size: 20px;
+    }
+
+    .modal {
+        top: 0;
+        left: 0;
+        transform: none;
+        height: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .modal__half {
+        width: 100%;
+}
+
+
+/*  Small Phones  */
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 52px;
+    }
+
+    .header__para {
+        font-size: 18px;
+    }
+
+    .nav__link:first-child {
+        display: none;
+    }
+
+    .project__description--para {
+        display: none;
+    }
+
+    .project__description {
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project__description--sub-title {
+        margin-bottom: 8px;
+    }
+
+    .modal__half {
+        padding: 40px;
+    }
+}
+
+
+        
+
 
 
 
