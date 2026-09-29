@@ -23,8 +23,8 @@ function contact(event) {
     emailjs                
        .sendForm(
         'service_21vdhsr'
-        'template_79h6ci5'
-        event.target,
+        (template_79h6ci5)
+        .event.target,
         'user_Zu0RDIbKPMMLYq7UN'
        )
          .then(() => {
@@ -39,13 +39,8 @@ function contact(event) {
     })
 }
 
-    
-    
-
-       
- 
-let isModalOpen = false;
-function toggleModal() {
+    let (isModalOpen) = false;
+        function toggleModal() {
     if (modalOpen) {
         isModalOpen = false;
         return document.body.classList.remove("modal--open");
